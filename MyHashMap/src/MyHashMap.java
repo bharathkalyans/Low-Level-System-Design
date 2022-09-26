@@ -15,7 +15,7 @@ public class MyHashMap<K, V> {
         }
     }
 
-    public Entry[] hashTable;
+    private final Entry[] hashTable;
 
     MyHashMap() {
         hashTable = new Entry[INITIAL_SIZE];
@@ -43,7 +43,7 @@ public class MyHashMap<K, V> {
 
         Entry node = hashTable[hashCode];
         if (node == null) {
-            Entry entry = new Entry(k, v);
+            Entry<K, V> entry = new Entry<>(k, v);
             hashTable[hashCode] = entry;
         } else {
             Entry temp = node;
@@ -55,8 +55,7 @@ public class MyHashMap<K, V> {
                 temp = temp.next;
             }
 
-            Entry entry = new Entry(k, v);
-            temp.next = entry;
+            temp.next = new Entry<>(k, v);
         }
     }
 
@@ -73,4 +72,22 @@ public class MyHashMap<K, V> {
         return null;
     }
 
+    public boolean containsKey(K k) {
+        int hashCode = k.hashCode() % hashTable.length;
+
+        Entry temp = hashTable[hashCode];
+        while (temp != null) {
+            if (temp.key == k)
+                return true;
+            temp = temp.next;
+        }
+
+        return false;
+    }
+
+    //You can your own hash code function added here!
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 }
