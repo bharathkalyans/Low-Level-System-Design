@@ -72,21 +72,33 @@ public class TicTacToeGame {
 
         //CHECK THE WHOLE ROW!
         for (int i = 0; i < gameBoard.size; i++) {
-            if (gameBoard.board[row][i] == null || gameBoard.board[row][i] != playingPiece) rowMatch = false;
+            if (gameBoard.board[row][i] == null || gameBoard.board[row][i] != playingPiece) {
+                rowMatch = false;
+                break;
+            }
         }
 
 
         for (int i = 0; i < gameBoard.size; i++) {
-            if (gameBoard.board[i][column] == null || gameBoard.board[i][column] != playingPiece) columnMatch = false;
+            if (gameBoard.board[i][column] == null || gameBoard.board[i][column] != playingPiece) {
+                columnMatch = false;
+                break;
+            }
         }
 
 
         for (int i = 0, j = 0; i < gameBoard.size; i++, j++) {
-            if (gameBoard.board[i][j] == null || gameBoard.board[i][j] != playingPiece) diagonalMatch = false;
+            if (gameBoard.board[i][j] == null || gameBoard.board[i][j] != playingPiece) {
+                diagonalMatch = false;
+                break;
+            }
         }
 
         for (int i = 0, j = gameBoard.size - 1; i < gameBoard.size; i++, j--) {
-            if (gameBoard.board[i][j] == null || gameBoard.board[i][j] != playingPiece) antiDiagonalMatch = false;
+            if (gameBoard.board[i][j] == null || gameBoard.board[i][j] != playingPiece) {
+                antiDiagonalMatch = false;
+                break;
+            }
         }
 
         return rowMatch || columnMatch || diagonalMatch || antiDiagonalMatch;

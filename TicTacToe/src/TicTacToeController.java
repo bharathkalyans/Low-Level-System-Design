@@ -4,6 +4,6 @@ public class TicTacToeController {
         TicTacToeGame game = new TicTacToeGame();
         String winner = game.startGame();
         if (winner.equals("TIE")) System.out.println("It's a TIE!! 😭");
-        else System.out.println("Winner is ::  " + winner);
+        else System.out.println("Congratulations, " + winner + " you have WON! 🥳");
     }
 }

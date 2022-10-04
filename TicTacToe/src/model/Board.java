@@ -1,18 +1,5 @@
 package model;
 
-
-import java.util.ArrayList;
-import java.util.List;
-
-class Pair<I extends Number, I1 extends Number> {
-    Integer A, B;
-
-    Pair(Integer A, Integer B) {
-        this.A = A;
-        this.B = B;
-    }
-}
-
 public class Board {
 
     public int size;
@@ -31,10 +18,10 @@ public class Board {
     }
 
     public void printBoard() {
-        for (int i = 0; i < board.length; i++) {
+        for (PlayingPiece[] playingPieces : board) {
             System.out.print("| ");
-            for (int j = 0; j < board[i].length; j++) {
-                if (board[i][j] != null) System.out.print(board[i][j].pieceType.name() + " ");
+            for (PlayingPiece playingPiece : playingPieces) {
+                if (playingPiece != null) System.out.print(playingPiece.pieceType.name() + " ");
                 else System.out.print("  ");
                 System.out.print(" | ");
             }
