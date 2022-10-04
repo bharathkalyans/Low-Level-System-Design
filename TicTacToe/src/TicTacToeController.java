@@ -2,6 +2,8 @@ public class TicTacToeController {
 
     public static void main(String[] args) {
         TicTacToeGame game = new TicTacToeGame();
-        System.out.println("Winner is ::  " + game.startGame());
+        String winner = game.startGame();
+        if (winner.equals("TIE")) System.out.println("It's a TIE!! 😭");
+        else System.out.println("Winner is ::  " + winner);
     }
 }
