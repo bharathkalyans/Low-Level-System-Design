@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Low Level System Design.iml" filepath="$PROJECT_DIR$/.idea/Low Level System Design.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyHashMap/MyHashMap.iml" filepath="$PROJECT_DIR$/MyHashMap/MyHashMap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StrategyPattern/StrategyPattern.iml" filepath="$PROJECT_DIR$/StrategyPattern/StrategyPattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/TicTacToe/TicTacToe.iml" filepath="$PROJECT_DIR$/TicTacToe/TicTacToe.iml" />
     </modules>
   </component>
