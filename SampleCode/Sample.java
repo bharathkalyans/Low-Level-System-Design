@@ -1,5 +1,9 @@
-class Sample{
+class Sample {
     public static void main(String[] args) {
-        System.out.println("Hello in Sample Branch");
+        sayHello();
+    }
+
+    private static void sayHello() {
+        System.out.println("I am saying Hello!");
     }
 }
