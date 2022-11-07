@@ -3,7 +3,7 @@ public class MyHashMapController {
         MyHashMap<Integer, String> map = new MyHashMap<>();
         map.put(1, "Bharath");
         map.put(2, "Ananth");
-        map.put(3, "Dixit");
+        map.put(3, "Raghu");
 
         System.out.println(map.get(2));
         System.out.println(map.get(22));
